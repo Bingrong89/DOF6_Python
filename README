@@ -1,0 +1,23 @@
+Requirements:
+Python 3
+OpenCV 4.1.1(There is a bug with SolvePnPRansac at OpenCV 3.4, any higher verions should be fine)
+Numpy
+
+The solution here is based on https://docs.opencv.org/master/dc/d2c/tutorial_real_time_pose.html.
+The original solution was written in C++, reimplemented here in Python with some modifications and simplifications.
+
+I am also using the provided files from https://github.com/opencv/opencv/tree/master/samples/cpp/tutorial_code/calib3d/real_time_pose_estimation/Data,
+as I have found the performance to depend quite significantly on the mesh file provided.
+
+
+Instructions for usage:
+Run dof6.py from terminal,
+python dof6.py --video --yml --ply
+Paths can either be relative to the directory terminal is in, or absolute.
+
+Or just run "python dof6.py" and use the default files provided in the folder.
+
+While the video frames are running:
+1 .press ESC to exit early
+2. press s to pause or unpause
+
